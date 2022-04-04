@@ -4,7 +4,7 @@ I got most of my info from [John Elder Codemy.com YouTube](https://www.youtube.c
 
 ![image](https://user-images.githubusercontent.com/94538153/161453897-c86ecb0f-e037-45fc-b869-2d436e095203.png)
 
-You have to enter your trades manualy. But this tracks your trades and your dollar cost averages.
+You have to enter your trades manually. But this tracks your trades and your dollar cost averages.
 There is an option in the dropdown to print a pdf report of all your trades. (It's ugly AF right now.)
 
 # ADD NEW
