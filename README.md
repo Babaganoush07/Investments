@@ -21,9 +21,9 @@
 ## Technologies Used
 - Python 3.9.9
 - tkinter
-- re (Regular Expressions)
-- Pillow
-- Pandas
+- sqlite3
+- pillow
+- pandas
 - os
 
 
