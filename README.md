@@ -7,6 +7,7 @@
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Screenshots](#screenshots)
+* [Setup](#setup)
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
@@ -39,6 +40,11 @@
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/94538153/161453897-c86ecb0f-e037-45fc-b869-2d436e095203.png)
+
+
+## Setup
+- You will need all the images and icons in the [Images](https://github.com/Babaganoush07/invesments_python/tree/main/Images) folder.
+- And change the file paths for all the pictures and pdf stuff.
 
 
 ## Project Status
