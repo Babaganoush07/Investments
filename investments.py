@@ -15,7 +15,7 @@ MyTopPos = (main.winfo_screenheight() - 820) / 2 - 20
 main.geometry( "%dx%d+%d+%d" % (1200,820, MyLeftPos, MyTopPos))
 main.config(bg='#0B5A81')
 main.resizable(False,False)
-main.iconbitmap('C:/Users/Carr Rieger/Python/Python39-32/Project_Images/lampcar.ico')
+main.iconbitmap('C:/Users/First Last/Python/Python39-32/Project_Images/lampcar.ico')
 
 main_menu = Menu(main)
 main.config(menu = main_menu)
@@ -750,25 +750,25 @@ def create_csv_reports():
     cur = con.cursor()
 
     stock_report_dataframe = (pandas.read_sql_query("SELECT name as Name, round(SUM(cost),2) as Cost, round(SUM(shares),10) as Shares,abs(round((SUM(cost) / SUM(shares)),2)) as Average FROM stock_trades GROUP BY name ORDER BY Shares DESC",con))
-    stock_report_dataframe.to_csv('C:/Users/Carr Rieger/Python/Python39-32/Project_Investments/stock_report.csv', index=False)
+    stock_report_dataframe.to_csv('C:/Users/First Last/Python/Python39-32/Project_Investments/stock_report.csv', index=False)
 
     stock_trades_dataframe = (pandas.read_sql_query("SELECT * FROM stock_trades ORDER BY date DESC",con))
-    stock_trades_dataframe.to_csv('C:/Users/Carr Rieger/Python/Python39-32/Project_Investments/stock_trades.csv', index=False)
+    stock_trades_dataframe.to_csv('C:/Users/First Last/Python/Python39-32/Project_Investments/stock_trades.csv', index=False)
 
     crypto_report_dataframe = (pandas.read_sql_query("SELECT name as Name, round(SUM(cost),2) as Cost, round(SUM(coins),10) as Coins,abs(round((SUM(cost) / SUM(coins)),2)) as Average FROM crypto_trades GROUP BY name ORDER BY Coins DESC",con))
-    crypto_report_dataframe.to_csv('C:/Users/Carr Rieger/Python/Python39-32/Project_Investments/crypto_report.csv', index=False)
+    crypto_report_dataframe.to_csv('C:/Users/First Last/Python/Python39-32/Project_Investments/crypto_report.csv', index=False)
 
     crypto_trades_dataframe = (pandas.read_sql_query("SELECT * FROM crypto_trades ORDER BY date DESC",con))
-    crypto_trades_dataframe.to_csv('C:/Users/Carr Rieger/Python/Python39-32/Project_Investments/crypto_trades.csv', index=False)
+    crypto_trades_dataframe.to_csv('C:/Users/First Last/Python/Python39-32/Project_Investments/crypto_trades.csv', index=False)
 
     con.commit()
     con.close()
 
 def delete_csv_reports():
-    stock_report = 'C:/Users/Carr Rieger/Python/Python39-32/Project_Investments/stock_report.csv'
-    stock_trades = 'C:/Users/Carr Rieger/Python/Python39-32/Project_Investments/stock_trades.csv'
-    crypto_report = 'C:/Users/Carr Rieger/Python/Python39-32/Project_Investments/crypto_report.csv'
-    crypto_trades = 'C:/Users/Carr Rieger/Python/Python39-32/Project_Investments/crypto_trades.csv'
+    stock_report = 'C:/Users/First Last/Python/Python39-32/Project_Investments/stock_report.csv'
+    stock_trades = 'C:/Users/First Last/Python/Python39-32/Project_Investments/stock_trades.csv'
+    crypto_report = 'C:/Users/First Last/Python/Python39-32/Project_Investments/crypto_report.csv'
+    crypto_trades = 'C:/Users/First Last/Python/Python39-32/Project_Investments/crypto_trades.csv'
 
     os.remove(stock_report)
     os.remove(stock_trades)
@@ -905,7 +905,7 @@ def pdf_full_report():
     delete_csv_reports()
     
     messagebox.showinfo('confirmation', 'Full Report PDF generated')
-    os.startfile('C:/Users/Carr Rieger/Python/Python39-32/Project_Investments/'+report_name)
+    os.startfile('C:/Users/First Last/Python/Python39-32/Project_Investments/'+report_name)
 
 
 #Add STOCK Buttons to screen
@@ -944,7 +944,7 @@ crypto_clear_button.grid(row=3, column=0, pady=10, padx=10)
 stock_tree.bind("<ButtonRelease-1>", stock_select_record)
 crypto_tree.bind("<ButtonRelease-1>", crypto_select_record)
 # Headers
-robbinhood_pic = Image.open('C:/Users/Carr Rieger/Python/Python39-32/Project_Images/robinhoodlogo.png')
+robbinhood_pic = Image.open('C:/Users/First Last/Python/Python39-32/Project_Images/robinhoodlogo.png')
 robbinhood_resize = robbinhood_pic.resize((50, 50), Image.ANTIALIAS)
 robbinhood_pic = ImageTk.PhotoImage(robbinhood_resize)
 Label( main, image=robbinhood_pic,height=50,width=50,).place(x=780, y=10)
@@ -953,7 +953,7 @@ Label(main, text="Robinhood",font =('MaisonNeue', 30, 'bold'),bg='#0B5A81', fg='
 stock_header = Entry(main, font=('veranda' ,15, 'bold'),width=35,justify='center')
 stock_header.place(x=780, y=70)
 
-coinbase_pic = Image.open('C:/Users/Carr Rieger/Python/Python39-32/Project_Images/coinbaselogo.png')
+coinbase_pic = Image.open('C:/Users/First Last/Python/Python39-32/Project_Images/coinbaselogo.png')
 coinbase_resize = coinbase_pic.resize((50, 50), Image.ANTIALIAS)
 coinbase_pic = ImageTk.PhotoImage(coinbase_resize)
 Label( main, image=coinbase_pic,height=50,width=50,).place(x=780, y=410)
